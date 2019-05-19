@@ -2,7 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import "variables";
+$primary-font-stack: Helvetica, sans-serif;
+$primary-color: #021e60; // blue
+$complement-color: #99cc66; // green
+$font-color: #34495e;
 
 .content-room {
   width: 50%;
