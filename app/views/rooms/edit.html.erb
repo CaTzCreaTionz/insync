@@ -1,0 +1,12 @@
+<section class="content-room">
+  <div class="card rooms">
+    <div class="card-body rooms">
+      <h3 class="card-title">Edit Room</h3>
+      <%= render 'form', room: @room %>
+      <br>
+      <p class="card-text"><%= link_to 'Back to rooms', rooms_path, class: "btn btn-outline-secondary" %></p>
+      <p class="card-text"<%= link_to 'Show', @room %> |
+      <%= link_to 'Back', rooms_path %> </p>
+    </div>
+  </div>
+</section>

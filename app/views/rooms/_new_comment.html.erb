@@ -1,0 +1,8 @@
+<%= form_for([@room, @room.messages.build]) do |f| %>
+  <div class="input-group mb-3">
+    <%= f.text_field :message, input_html: {class: 'chat-input'}, class: "form-control" %>
+    <div class="input-group-append">
+      <%= f.submit "Send", class: "btn btn-primary chat-input" %>
+    </div>
+  </div>
+<% end %>
