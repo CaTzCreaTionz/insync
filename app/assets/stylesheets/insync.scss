@@ -1,20 +1,28 @@
-$primary-font-stack: Helvetica, sans-serif;
-$primary-color: #021e60; // blue
-$complement-color: #99cc66; // green
-$font-color: #34495e;
+@import "variables";
 
 html {
   height: 100%;
 }
 
 body {
-  background-color: white;
+  background-color: $primary-color;
   color: $font-color;
   font: 100% $primary-font-stack;
-  line-height: 1.5em;
   position: relative;
-  min-height: 100%;
-  padding-bottom: 5em;
+  height: 100%;
+}
+
+.navbar {
+  background-color: $primary-color !important;
+  height: 4em !important;
+}
+
+.nav-link {
+  color: white;
+}
+
+a:hover {
+  color: rgb(197,183,198);
 }
 
 .avatar {
@@ -22,10 +30,24 @@ body {
   border-radius: 15px;
   width:auto;
   vertical-align:middle;
+  padding-right: .5em;
 }
 
 .main-container {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 2em;
+  color: $font-color;
+}
+
+.header {
+  margin-left: 1em;
+  color: rgb(197,183,198);
+}
+
+.welcome {
+  background-color: white;
+  color: $font-color;
+  padding: 1em;
+  height: 100%;
+  border-radius: 5px;
 }

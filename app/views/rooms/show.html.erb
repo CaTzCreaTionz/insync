@@ -1,13 +1,19 @@
-<p>
-  <%= @room.name %>
-</p>
-
 <div class="row">
-  <div class="col-12 col-md-3">
+  <div class="col-12 col-md-2">
+    <h6 class="header">Rooms</h6>
     <%= render partial: 'rooms' %>
   </div>
 
-  <div class="col">
+
+
+  <div class="col message-wrapper">
+    <div class="col">
+      <h4><strong>
+        <%= @room.name %> room
+      </strong></h4>
+      <%= link_to 'Edit Room', edit_room_path(@room), class: "btn btn-primary btn-sm" %> |
+      <%= link_to 'Home', rooms_path, class: "btn btn-primary btn-sm" %>
+    </div>
     <div class="chat">
       <% @messages.each do |message| %>
         <div class="chat-message-container">
@@ -18,26 +24,17 @@
 
             <div class="col">
               <div class="message-content">
-                <p class="mb-1">
-                  <%= message.message %>
-                </p>
-
-                <div class="text-right">
-                  <small>
-                    <%= message.created_at %>
-                  </small>
+                <div class="text-left">
+                  <strong><%= message.user.username %></strong>
+                  <small><%= message.created_at.strftime("%I:%M%p %d-%b-%y") %></small>
                 </div>
+                  <%= message.message %>
               </div>
             </div>
           </div>
         </div>
       <% end %>
     </div>
-
     <%= render 'new_comment' %>
-
   </div>
 </div>
-
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>

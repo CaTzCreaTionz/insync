@@ -1,16 +1,16 @@
 <% if @rooms.present? %>
   <nav class="nav flex-column">
     <% @rooms.each do |room| %>
-      <%= link_to room.name, room_path(room), class: "nav-link room-nav-link" %>
+      <b><%= link_to room.name, room_path(room), class: "nav-link room-nav-link" %></b>
     <% end %>
   </nav>
 <% else %>
   <div class="text-muted">There are no rooms</div>
 <% end %>
 
-<div class="mb-3">
+<div class="mb-3 link-room">
   <br>
-  <%= link_to new_room_path, class: "btn btn-primary" do %>
+  <%= link_to new_room_path do %>
     Create a room
   <% end %>
 </div>

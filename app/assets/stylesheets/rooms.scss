@@ -2,13 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$primary-font-stack: Helvetica, sans-serif;
-$primary-color: #021e60; // blue
-$complement-color: #99cc66; // green
-$font-color: #34495e;
+@import "variables";
 
 .content-room {
   width: 50%;
   margin: 0 auto;
   margin-top: 2em;
+}
+
+.row {
+  margin: 0!important;
+}
+
+.link-room a {
+  color: rgb(197,183,198);
+  margin-left: 1em;
+}
+
+.link-room a:hover {
+  text-decoration: none;
+  color: white;
 }

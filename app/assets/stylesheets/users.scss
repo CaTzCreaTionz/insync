@@ -1,13 +1,8 @@
-$primary-font-stack: Helvetica, sans-serif;
-$primary-color: #021e60; // blue
-$complement-color: #99cc66; // green
-$font-color: #34495e;
+@import "variables";
 
-.form-elegant {
+.user-form {
   width: 90%;
   margin: 0 auto;
-  margin-top: 6em;
-  margin-bottom: 1em;
 }
 
 .sign-in {
