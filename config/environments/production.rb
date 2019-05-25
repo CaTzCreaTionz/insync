@@ -92,5 +92,8 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'radiant-springs-79864.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'in-sync.herokuapp.com' }
+  config.web_socket_server_url = "wss://in-sync.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://in-sync.herokuapp.com', 'http://in-sync.herokuapp.com']
+
 end

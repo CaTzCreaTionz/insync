@@ -1,0 +1,17 @@
+<div class="chat-message-container">
+  <div class="row no-gutters">
+    <div class="col-auto text-center">
+      <img src="<%= gravatar_url(message.user) %>" class="avatar" alt="">
+    </div>
+
+    <div class="col">
+      <div class="message-content">
+        <div class="text-left">
+          <strong><%= message.user.username %></strong>
+          <small><%= message.created_at.strftime("%I:%M%p %d-%b-%y") %></small>
+        </div>
+          <%= message.message %>
+      </div>
+    </div>
+  </div>
+</div>

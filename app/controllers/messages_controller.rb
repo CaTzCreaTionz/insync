@@ -5,13 +5,16 @@ class MessagesController < ApplicationController
     @room = Room.find(params[:room_id])
     @message = @room.messages.new(message_params)
     @message.user = current_user
-    @message.save
+    @user = current_user
 
     respond_to do |format|
-        if @message.save
-          ActionCable.server.broadcast 'room_channel', message: @message
-         format.html { redirect_to @room, notice: 'Message was created successfully.' }
+      if @message.save
+        format.html { redirect_to @room, notice: 'Message was created successfully.' }
+        format.json { render :show, status: :created, location: @room }
+        format.js
        else
+        format.html { redirect_to @room, alert: 'Review was not saved successfully.' }
+        format.json { render json: @message.errors, status: :unprocessable_entity }
     end
   end
 end

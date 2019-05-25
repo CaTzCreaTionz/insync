@@ -6,11 +6,19 @@
 .message-wrapper {
   background-color: white !important;
   padding-top: 1em;
-  margin: 0 1em;
+  margin: 0 1.5em 0 1em;
   border-radius: 5px;
 }
 
-.chat {
+.room-header {
+  display: inline-block;
+}
+
+.btn-sm {
+  float:right;
+}
+
+.chat-main {
   height: 60vh;
   overflow-y: auto;
 }

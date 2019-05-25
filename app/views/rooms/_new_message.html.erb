@@ -1,4 +1,4 @@
-<%= form_for([@room, @room.messages.build]) do |f| %>
+<%= form_for([@room, @room.messages.build], remote: true) do |f| %>
   <div class="input-group mb-3">
     <%= f.text_field :message, input_html: {class: 'chat-input'}, class: "form-control" %>
     <div class="input-group-append">
