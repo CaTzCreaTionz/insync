@@ -6,9 +6,21 @@
 }
 
 .sign-in {
-  width: 40% !important;
+  width: 95% !important;
   margin: 0 auto;
   margin-bottom: 2em;
+}
+
+@media only screen and (min-width: 768px) {
+  .sign-in {
+    width: 60% !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .sign-in {
+    width: 50% !important;
+  }
 }
 
 .md-form {
